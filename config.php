@@ -12,3 +12,12 @@ define("ADMIN_PASSWORD", "admin");
 require(CLASS_PATH ."/Article.php");
 
 
+function handleExcepetion($exception){
+	echo "Sorry, a problem occured. Please try later.";
+	error_log($exception->getMessage());
+}
+
+set_exception_handler('handleException');
+
+
+
